@@ -15,36 +15,91 @@ public class ll2
     }
     //find the nth node from last + delete the nth node
 
-    public Listnode removeNthnode(Listnode head, int n)
-    {
-        if(head.next==null)
-        {
-            return null;
-        }
+    // public Listnode removeNthnode(Listnode head, int n)
+    // {
+    //     if(head.next==null)
+    //     {
+    //         return null;
+    //     }
 
-        int size=0;
-        Listnode curr=head;
-        while(curr != null)
+    //     int size=0;
+    //     Listnode curr=head;
+    //     while(curr != null)
+    //     {
+    //         curr=curr.next;
+    //         // curr++;
+    //         size++;
+    //     }
+    //     if(n==size)
+    //     {
+    //         return head.next;
+    //     }
+    //     int indextosearch= size-n;
+    //     Listnode perv=head;
+    //     int i=1;
+    //     while(i<indextosearch)
+    //     {
+    //         perv=perv.next;
+    //         i++;
+    //     }
+    //     perv.next=perv.next.next;
+    //     return head;
+    // }
+
+
+    // PALINDROMIC LOOK SAME FROM START AND END...   1-> 2 -> 2 -> 1 -> NULL
+
+    public Listnode  findmiddle(Listnode head)//here turtle
+    {
+        Listnode hare= head;
+        Listnode turtle=head;
+        while(hare.next != null&& hare.next.next !=null)
         {
-            curr=curr.next;
-            // curr++;
-            size++;
+            hare= hare.next.next;
+            turtle=turtle.next;
+
         }
-        if(n==size)
-        {
-            return head.next;
-        }
-        int indextosearch= size-n;
-        Listnode perv=head;
-        int i=1;
-        while(i<indextosearch)
-        {
-            perv=perv.next;
-            i++;
-        }
-        perv.next=perv.next.next;
-        return head;
+        return turtle;
+
     }
+
+    public Listnode reverse(Listnode head)
+    {
+        Listnode perv= null;
+        Listnode curr=head;
+        while(curr !=null)
+        {
+            Listnode next =curr.next;
+            curr.next=perv;
+            perv=curr;
+            curr=next;
+        }
+        return perv;
+    }
+
+
+    public boolean isPalidrame(Listnode head)
+    {
+        if(head==null|| head.next==null)
+        {
+            return true;
+        }
+        Listnode middle =findMiddle(head);
+        Listnode second_half_start= reverse(middle.next);
+        Listnode first_half_start= head;
+
+        while(second_half_start != null)
+        {
+            if(first_half_start.val != second_half_start.val)
+            {
+                return false;
+            }
+            first_half_start=first_half_start.next;
+            second_half_start=second_half_start.next;
+        }
+        return true;
+    }
+
     public void printList(Listnode head) {
         Listnode curr = head;
 
@@ -70,7 +125,7 @@ public class ll2
         list.printList(head);
 
         // remove 2nd node from end
-        head = list.removeNthnode(head, 2);
+        // head = list.removeNthnode(head, 2);
 
         System.out.println("After Deletion:");
         list.printList(head);
