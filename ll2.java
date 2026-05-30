@@ -49,7 +49,7 @@ public class ll2
 
     // PALINDROMIC LOOK SAME FROM START AND END...   1-> 2 -> 2 -> 1 -> NULL
 
-    public Listnode  findmiddle(Listnode head)//here turtle
+    public Listnode  findMiddle(Listnode head)//here turtle
     {
         Listnode hare= head;
         Listnode turtle=head;
@@ -90,7 +90,7 @@ public class ll2
 
         while(second_half_start != null)
         {
-            if(first_half_start.val != second_half_start.val)
+            if(first_half_start.data != second_half_start.data)
             {
                 return false;
             }
