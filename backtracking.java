@@ -155,9 +155,7 @@ public class backtracking {
                 if(board[i][j]==(char)(number+'0')){
                     return false;
                 }
-
             }
-    
         }
         return true;
 

@@ -1,3 +1,5 @@
+//encapsulation
+/* 
 class Student {
     private int age;
 
@@ -21,3 +23,7 @@ public class oop {
         System.out.println(s1.getAge());
     }
 }
+ */
+
+
+//

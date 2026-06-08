@@ -22,6 +22,7 @@ public class leet121 {
         return maxProfit;
         
     }
+
     public static void main(String[] args) {
 
         leet121 obj = new leet121();
