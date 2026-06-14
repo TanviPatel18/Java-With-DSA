@@ -26,6 +26,18 @@ public class BT_for_Preorder_Array {
             return newnode;
         }
     }
+     public static void preorder(Node root) 
+    {
+        if(root==null)
+        {
+            return;
+        }
+
+        System.out.print(root.data + " ");
+        preorder(root.left);
+        preorder(root.right);
+
+    }
    
     
     public static void main(String[] args) {
@@ -34,6 +46,6 @@ public class BT_for_Preorder_Array {
         Node root=tree.buildTree(nodes);
         // System.out.println(root.data); // Output: 1
 
-        // preorder(root);
+        preorder(root);
     }
 }
