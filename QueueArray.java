@@ -179,7 +179,7 @@ public class QueueArray {
         q.add(6);
         q.add(7);
 
-          q.display();
+        q.display();
 
     }
 }
