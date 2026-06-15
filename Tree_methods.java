@@ -26,6 +26,28 @@ public class Tree_methods {
             return newnode;
         }
     }
+    public static int sumNodes(Node root)
+    {
+        if(root == null)
+        {
+            return 0;
+        }
+
+        return sumNodes(root.left)+ sumNodes(root.right)+ root.data;
+    }
+
+    public static int countNodes(Node root)
+    {
+        if(root == null)
+        {
+            return 0;
+        }
+
+        int leftCount = countNodes(root.left);
+        int rightCount = countNodes(root.right);
+
+        return leftCount + rightCount + 1;
+    }
 
     public static int height(Node root)
     {
@@ -39,13 +61,35 @@ public class Tree_methods {
 
         return Math.max(leftHeight, rightHeight) + 1;
     }
+
+    public static int diameter(Node root)
+    {
+        if(root == null)
+        {
+            return 0;
+        }
+
+        int leftDiameter = diameter(root.left);
+        int rightDiameter = diameter(root.right);
+
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+
+        int selfDiameter = leftHeight + rightHeight + 1;
+
+        return Math.max(selfDiameter,Math.max(leftDiameter, rightDiameter));
+    }
     public static void main(String[] args)
     {
-    int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+        int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
 
-    Binarytree tree = new Binarytree();
-    Node root = tree.buildTree(nodes);
+        Binarytree tree = new Binarytree();
+        Node root = tree.buildTree(nodes);
 
-    System.out.println("Height = " + height(root));
+        System.out.println("Height = " + height(root));
+        System.out.println("Count = " + countNodes(root));
+        System.out.println("Sum = " + sumNodes(root));
+        System.out.println("Height = " + height(root));
+        System.out.println("Diameter = " + diameter(root));
     }
 }
