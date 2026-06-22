@@ -80,45 +80,6 @@ public class Tree_methods {
         return Math.max(selfDiameter,Math.max(leftDiameter, rightDiameter));
     }
 
-
-
-    //subtree of another tree
-    public  boolean IsIdentical(Node root,Node subroot)
-    {
-        if(subroot ==null &&root ==null)
-        {
-            return true;
-        }
-        if(subroot ==null || root ==null)
-        {
-            return false;
-        }
-        if(root.data==subroot.data)
-        {
-             return IsIdentical(root.left, subroot.left)&& IsIdentical(root.right, subroot.right);
-        }
-        return false;
-    }
-    public boolean isSubtree(Node root,Node subroot)
-    {
-        if(subroot ==null)
-        {
-            return true;
-        }
-        if(root ==null)
-        {
-            return false;
-        }
-        if(root.data==subroot.data)
-        {
-            if(IsIdentical(root, subroot))
-            {
-                return true;
-            }
-        }
-        return isSubtree(root.left, subroot)|| isSubtree(root.right, subroot);
-
-    }
     public static void main(String[] args)
     {
         int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
@@ -132,17 +93,6 @@ public class Tree_methods {
         System.out.println("Height = " + height(root));
         System.out.println("Diameter = " + diameter(root));
 
-
-
-
-        // Create subtree
-    Node subroot = new Node(2);
-    subroot.left = new Node(4);
-    subroot.right = new Node(5);
-
-    // Create object to call non-static methods
-    Tree_methods obj = new Tree_methods();
-
-    System.out.println("Is Subtree = " + obj.isSubtree(root, subroot));
+        
     }
 }
