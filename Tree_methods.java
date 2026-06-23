@@ -1,3 +1,4 @@
+import java.util.*;
 public class Tree_methods {
 
     static class Node {
@@ -80,6 +81,50 @@ public class Tree_methods {
         return Math.max(selfDiameter,Math.max(leftDiameter, rightDiameter));
     }
 
+    //sum of nodes at k level
+    public static int kthnodesum(Node root,int k)
+    {
+        if(root==null)
+        {
+            return 0;
+        }
+        Queue<Node>  q=new LinkedList<>();
+        q.add(root);
+        int level =1;
+        while(!q.isEmpty())
+        {
+            int size =q.size();
+
+            if(level==k)
+            {
+                int sum =0;
+            
+            for(int i=0;i<size;i++)
+            {
+                Node curr=q.poll();
+                sum +=curr.data;
+
+            }
+            return sum;
+        }
+        for (int i = 0; i < size; i++) {
+            Node curr = q.poll();
+
+            if (curr.left != null) {
+                q.add(curr.left);
+            }
+
+            if (curr.right != null) {
+                q.add(curr.right);
+            }
+        }
+
+        level++;
+        }
+        return 0;
+
+    }
+
     public static void main(String[] args)
     {
         int nodes[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
@@ -93,6 +138,6 @@ public class Tree_methods {
         System.out.println("Height = " + height(root));
         System.out.println("Diameter = " + diameter(root));
 
-        
+        System.out.println(kthnodesum(root, 3));
     }
 }
