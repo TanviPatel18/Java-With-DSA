@@ -117,9 +117,38 @@ public class BST_OPRATION {
         Inorder(root.left);
         System.out.print(root.data+" ");
         Inorder(root.right);
+        // System.out.println();
     }
+
+
+// exmple on the making BTS 
+
+    public static void printRange(Node  root, int x, int y)
+    {
+        if(root==null)
+        {
+            return ;
+        }
+        else if(root.data>=x && root.data<=y)
+        {
+            printRange(root.left, x, y);
+            System.out.print(root.data+" ");
+            printRange(root.right, x, y);
+        
+        }
+        else if(root.data>=y)
+        {
+            printRange(root.left, x, y);
+        }
+        else
+        {
+            printRange(root.right, x, y);
+        }
+    }
+
+
     public static void main(String[] args) {
-        int value[]={5,1,3,4,2,7};
+        int value[]={8,5,3,1,4,6,10,11,14};
         Node root=null;
         for(int i=0;i<value.length;i++)
         {
@@ -134,5 +163,7 @@ public class BST_OPRATION {
 
         delete(root, 4);
         Inorder(root);
+        System.out.println();
+        printRange(root, 3, 10);
     }   
 }
