@@ -1,6 +1,8 @@
 
 //hash set
+// Hashing is a technique used to store and retrieve data quickly using a key.
 
+// It converts a key into an index using a hash function.
 // insert/ add= o(1)
 // delete/remove=o(1)
 // search / contains = o(1)
@@ -45,6 +47,16 @@ public class hashing {
         {
             System.out.println("3 removed");
         }
+
+        //itretor
+        Iterator it=set.iterator();
+        //two function :- HashNext :- return the true and false for contain the next element or not
+        //  and 
+        // Next  :- return the value of next 
+        System.out.println(it.next());
+        System.out.println(it.next());
+        System.out.println(it.next());
+        System.out.println(it.hasNext());
 
     }
     
