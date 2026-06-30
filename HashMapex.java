@@ -26,5 +26,28 @@ public class HashMapex {
 
 
     System.out.println(map.get("chaina"));
+    System.out.println(map.get("uk"));
+
+
+    //Iteration
+
+    int arr []={12,25,34};
+    for(int i=0;i<3;i++)
+    {
+        System.out.print(arr[i]+" ");
+    }
+    System.out.println();
+
+    for(int val:arr)
+    {
+        System.out.print(val +" ");
+    }
+    
+
+    for(map.Entry<Intrger ,integer>e:map.entrySet())
+    {
+        System.out.println(e.getkey());
+        System.out.println( e.getvalue());
+    }
     }
 }
