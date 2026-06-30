@@ -48,5 +48,11 @@ public class HashMapex {
         for (Map.Entry<String, Integer> e : map.entrySet()) {
             System.out.println(e.getKey() + " -> " + e.getValue());
         }
+
+    Set<String> keys = map.keySet();
+    for(String key: keys)
+    {
+        System.out.println(key+" "+ map.get(key));
+    }
     }
 }
