@@ -43,11 +43,10 @@ public class HashMapex {
         System.out.print(val +" ");
     }
     
-
-    for(map.Entry<Intrger ,integer>e:map.entrySet())
-    {
-        System.out.println(e.getkey());
-        System.out.println( e.getvalue());
-    }
+System.out.println();
+      // HashMap Iteration
+        for (Map.Entry<String, Integer> e : map.entrySet()) {
+            System.out.println(e.getKey() + " -> " + e.getValue());
+        }
     }
 }
