@@ -43,7 +43,7 @@ public class HashMapex {
         System.out.print(val +" ");
     }
     
-System.out.println();
+    System.out.println();
       // HashMap Iteration
         for (Map.Entry<String, Integer> e : map.entrySet()) {
             System.out.println(e.getKey() + " -> " + e.getValue());
