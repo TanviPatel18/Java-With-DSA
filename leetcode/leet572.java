@@ -79,6 +79,6 @@ public class leet572 {
     // Create object to call non-static methods
     leet572 obj = new leet572();
 
-    System.out.println("Is Subtree = " + obj.isSubtree(root, subroot));
+    System.out.println("Is S1ubtree = " + obj.isSubtree(root, subroot));
     }
 }
