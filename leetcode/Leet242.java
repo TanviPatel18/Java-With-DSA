@@ -1,6 +1,4 @@
-// public class Leet242 {
-    
-    import java.util.Arrays;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Leet242 {
