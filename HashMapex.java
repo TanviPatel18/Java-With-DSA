@@ -2,6 +2,13 @@
 //key-value
 
 import java.util.*;
+//O(1)
+// put()
+// get()
+// containsKey=  check the key is in the hash map or not
+// remove()
+// size()= count pairs inn hash Map
+// keySet()=display all the key value pairs
 
 public class HashMapex {
     public static void main(String[] args) {
