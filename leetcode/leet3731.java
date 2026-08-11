@@ -39,4 +39,3 @@ public class leet3731 {
         System.out.println(ans); // Output: [3]
     }
 }
-}
