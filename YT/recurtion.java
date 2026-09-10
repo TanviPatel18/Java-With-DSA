@@ -74,19 +74,38 @@
 //     }
 // }
 
-//  problem 5: backtraking n->1
+// problem 5: backtraking n->1
+// public class recurtion {
+//     public static void f(int i,int n)
+//     {
+//         if(i>n)
+//         {
+//           return;
+//         }
+//         f(i+1,n);
+//         System.out.println(i);
+//     }    
+//     public static void main(String[] args)
+//     {
+//         f(1,5);
+//     }
+// }
+
+//  problem 6: parameteried
+
 public class recurtion {
-    public static void f(int i,int n)
+    public static void f(int n,int sum)
     {
-        if(i>n)
+        if(n<1)
         {
+            System.out.println(sum);
           return;
         }
-        f(i+1,n);
-        System.out.println(i);
+        f(n-1,sum+n);
+        // System.out.println(i);
     }    
     public static void main(String[] args)
     {
-        f(1,5);
+        f(10,0);
     }
 }
