@@ -6,7 +6,7 @@ public class petten {
         
         Scanner sc = new Scanner(System.in);
 
-        // int n = sc.nextInt();
+        int n = sc.nextInt();
         
 
        for (int i = 1; i <= 5; i++) {
