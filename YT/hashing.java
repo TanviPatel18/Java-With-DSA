@@ -40,38 +40,44 @@ import java.util.*;
 //     }
 // }
 
+// public class hashing 
+// {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter a string: ");
+//         String s = sc.nextLine();
+
+//         int[] hash = new int[263];
+
+//         for(int i = 0; i < s.length(); i++) {
+//             hash[s.charAt(i) - 'a']++;
+//         }
+
+//         System.out.print("How many letters you want to find: ");
+//         int q = sc.nextInt();
+
+//         char[] find = new char[q];
+
+//         System.out.println();
+
+//         for(int i = 0; i < q; i++) {
+//             System.out.print("Enter letter to find: ");
+//             find[i] = sc.next().charAt(0);
+//         }
+
+//         System.out.println();
+
+//         for(int i = 0; i < q; i++) {
+//             System.out.println(find[i] + " found "+ hash[find[i] - 'a'] + " times");
+//         }
+//     }
+
+// }
+
+
+
 public class hashing 
 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter a string: ");
-        String s = sc.nextLine();
-
-        int[] hash = new int[263];
-
-        for(int i = 0; i < s.length(); i++) {
-            hash[s.charAt(i) - 'a']++;
-        }
-
-        System.out.print("How many letters you want to find: ");
-        int q = sc.nextInt();
-
-        char[] find = new char[q];
-
-        System.out.println();
-
-        for(int i = 0; i < q; i++) {
-            System.out.print("Enter letter to find: ");
-            find[i] = sc.next().charAt(0);
-        }
-
-        System.out.println();
-
-        for(int i = 0; i < q; i++) {
-            System.out.println(find[i] + " found "+ hash[find[i] - 'a'] + " times");
-        }
-    }
-
+    
 }
-

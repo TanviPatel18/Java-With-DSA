@@ -7,14 +7,14 @@ public class recurtion {
         {
           return;
         }
-        System.out.println(i);
+        System.out.print(i);
         f(i+1,n);
         
         
     }    
     public static void main(String[] args)
     {
-                     Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
    
