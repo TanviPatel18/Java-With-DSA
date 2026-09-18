@@ -38,3 +38,5 @@ public class leet3936 {
         System.out.println("Minimum swaps = " + ans);
     }
 }
+
+

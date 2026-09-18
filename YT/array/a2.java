@@ -69,6 +69,25 @@ import java.util.Set;
 // }
 
 //union of 2 sortd array a1+a2;
+// public class a2
+// {
+//     public static void main(String[] args) {
+//         int[] a = {1, 2, 3, 4};
+//         int[] b = {2, 3, 5, 6};
+
+//         Set<Integer> set = new HashSet<>();
+
+//         for (int x : a) {
+//             set.add(x);
+//         }
+
+//         for (int x : b) {
+//             set.add(x);
+//         }
+//         System.out.println(set);
+//     }
+// }
+
 public class a2
 {
     public static void main(String[] args) {
@@ -84,9 +103,8 @@ public class a2
         for (int x : b) {
             set.add(x);
         }
-
         System.out.println(set);
-    
     }
-    
 }
+
+
